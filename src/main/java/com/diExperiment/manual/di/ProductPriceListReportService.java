@@ -18,7 +18,7 @@ public class ProductPriceListReportService {
 
     void generateReport(){
         var products = productDao.findAll();
-        var priceLists = productPriceCalculator.calculateSalaries(products);
+        var priceLists = productPriceCalculator.calculatePrices(products);
 
         priceListReport.writeReport(priceLists);
     }

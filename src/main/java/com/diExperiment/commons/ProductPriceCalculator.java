@@ -10,7 +10,7 @@ import java.util.List;
 @Component
 public class ProductPriceCalculator {
 
-    public List<PriceList> calculateSalaries(List<Product> products){
+    public List<PriceList> calculatePrices(List<Product> products){
         System.out.println("Calculating product prices");
         return Collections.emptyList();
     }

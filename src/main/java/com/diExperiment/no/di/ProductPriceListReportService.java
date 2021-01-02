@@ -17,12 +17,12 @@ public class ProductPriceListReportService {
         var products = productDao.findAll();
 
         var productPriceCalculator = new ProductPriceCalculator();
-        var priceLists = productPriceCalculator.calculateSalaries(products);
+        var priceLists = productPriceCalculator.calculatePrices(products);
 
         // not using DI
-        // PdfPriceListReport pdfPriceListReport = new PdfPriceListReport();
+        // var pdfPriceListReport = new PdfPriceListReport();
         // pdfPriceListReport.writeReport(priceLists);
-        // XlsPriceListReport xlsPriceListReport = new XlsPriceListReport();
+        // var xlsPriceListReport = new XlsPriceListReport();
         // xlsPriceListReport.writeReport(priceLists);
 
         // using DI
