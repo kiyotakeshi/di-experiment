@@ -1,12 +1,8 @@
-package com.kiyotagbangers.diExperiment.manual.di;
+package com.diExperiment.manual.di;
 
-import com.kiyotagbangers.diExperiment.commons.ProductPriceCalculator;
-import com.kiyotagbangers.diExperiment.commons.dao.ProductDao;
-import com.kiyotagbangers.diExperiment.commons.entity.PriceList;
-import com.kiyotagbangers.diExperiment.commons.entity.Product;
-import com.kiyotagbangers.diExperiment.commons.report.PriceListReport;
-
-import java.util.List;
+import com.diExperiment.commons.ProductPriceCalculator;
+import com.diExperiment.commons.dao.ProductDao;
+import com.diExperiment.commons.report.PriceListReport;
 
 public class ProductPriceListReportService {
 
@@ -21,8 +17,8 @@ public class ProductPriceListReportService {
     }
 
     void generateReport(){
-        List<Product> products = productDao.findAll();
-        List<PriceList> priceLists = productPriceCalculator.calculateSalaries(products);
+        var products = productDao.findAll();
+        var priceLists = productPriceCalculator.calculateSalaries(products);
 
         priceListReport.writeReport(priceLists);
     }

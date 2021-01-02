@@ -1,6 +1,6 @@
-package com.kiyotagbangers.diExperiment.commons.report;
+package com.diExperiment.commons.report;
 
-import com.kiyotagbangers.diExperiment.commons.entity.PriceList;
+import com.diExperiment.commons.entity.PriceList;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 

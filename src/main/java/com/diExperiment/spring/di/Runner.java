@@ -1,4 +1,4 @@
-package com.kiyotagbangers.diExperiment.spring.di;
+package com.diExperiment.spring.di;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -7,14 +7,14 @@ public class Runner {
 
         AnnotationConfigApplicationContext context = getSpringContext("pdf-reports");
         // AnnotationConfigApplicationContext context = getSpringContext("xls-reports");
-        ProductPriceListReportService productPriceListReportService = context.getBean(ProductPriceListReportService.class);
+        var productPriceListReportService = context.getBean(ProductPriceListReportService.class);
         productPriceListReportService.generateReport();
 
         context.close();
     }
 
     private static AnnotationConfigApplicationContext getSpringContext(String profile) {
-        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
+        var context = new AnnotationConfigApplicationContext();
         context.getEnvironment().setActiveProfiles(profile);
         context.register(Configuration.class);
         context.refresh();

@@ -1,6 +1,6 @@
-package com.kiyotagbangers.diExperiment.commons.dao;
+package com.diExperiment.commons.dao;
 
-import com.kiyotagbangers.diExperiment.commons.entity.Product;
+import com.diExperiment.commons.entity.Product;
 import org.springframework.stereotype.Component;
 
 import java.util.Collections;

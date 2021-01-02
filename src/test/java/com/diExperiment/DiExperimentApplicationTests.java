@@ -1,4 +1,4 @@
-package com.kiyotagbangers.diExperiment;
+package com.diExperiment;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
