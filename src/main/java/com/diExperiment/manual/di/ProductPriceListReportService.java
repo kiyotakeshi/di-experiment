@@ -20,6 +20,6 @@ public class ProductPriceListReportService {
         var products = productDao.findAll();
         var priceLists = productPriceCalculator.calculatePrices(products);
 
-        priceListReport.writeReport(priceLists);
+        this.priceListReport.writeReport(priceLists);
     }
 }

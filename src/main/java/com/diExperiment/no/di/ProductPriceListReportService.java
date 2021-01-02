@@ -26,6 +26,6 @@ public class ProductPriceListReportService {
         // xlsPriceListReport.writeReport(priceLists);
 
         // using DI
-        priceListReport.writeReport(priceLists);
+        this.priceListReport.writeReport(priceLists);
     }
 }
