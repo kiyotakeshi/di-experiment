@@ -1,6 +1,6 @@
 package com.diExperiment.spring.di;
 
-import com.diExperiment.commons.ProductPriceCalculator;
+import com.diExperiment.commons.businessLogic.ProductPriceCalculator;
 import com.diExperiment.commons.dao.ProductDao;
 import com.diExperiment.commons.report.PriceListReport;
 import org.springframework.stereotype.Service;

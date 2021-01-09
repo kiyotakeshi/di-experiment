@@ -1,6 +1,6 @@
 package com.diExperiment.manual.di;
 
-import com.diExperiment.commons.ProductPriceCalculator;
+import com.diExperiment.commons.businessLogic.ProductPriceCalculator;
 import com.diExperiment.commons.dao.ProductDao;
 import com.diExperiment.commons.report.PriceListReport;
 
@@ -16,7 +16,7 @@ public class ProductPriceListReportService {
         this.priceListReport = priceListReport;
     }
 
-    void generateReport(){
+    public void generateReport(){
         var products = productDao.findAll();
         var priceLists = productPriceCalculator.calculatePrices(products);
 

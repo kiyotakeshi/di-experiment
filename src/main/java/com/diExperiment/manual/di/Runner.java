@@ -1,6 +1,6 @@
 package com.diExperiment.manual.di;
 
-import com.diExperiment.commons.ProductPriceCalculator;
+import com.diExperiment.commons.businessLogic.ProductPriceCalculator;
 import com.diExperiment.commons.dao.ProductDao;
 import com.diExperiment.commons.report.XlsPriceListReport;
 

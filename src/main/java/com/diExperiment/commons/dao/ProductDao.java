@@ -1,6 +1,6 @@
 package com.diExperiment.commons.dao;
 
-import com.diExperiment.commons.entity.Product;
+import com.diExperiment.commons.dataStructure.Product;
 import org.springframework.stereotype.Component;
 
 import java.util.Collections;

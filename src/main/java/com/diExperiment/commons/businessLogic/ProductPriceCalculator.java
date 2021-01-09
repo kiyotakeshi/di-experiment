@@ -1,7 +1,7 @@
-package com.diExperiment.commons;
+package com.diExperiment.commons.businessLogic;
 
-import com.diExperiment.commons.entity.PriceList;
-import com.diExperiment.commons.entity.Product;
+import com.diExperiment.commons.dataStructure.PriceList;
+import com.diExperiment.commons.dataStructure.Product;
 import org.springframework.stereotype.Component;
 
 import java.util.Collections;
