@@ -6,26 +6,20 @@ import com.diExperiment.commons.dao.ProductDao;
 
 public class ProductPriceListReportService {
 
+    private final ProductDao productDao;
+    private final ProductPriceCalculator productPriceCalculator;
     private final PriceListReport priceListReport;
 
-    public ProductPriceListReportService(PriceListReport priceListReport) {
+    public ProductPriceListReportService(ProductDao productDao, ProductPriceCalculator productPriceCalculator, PriceListReport priceListReport) {
+        this.productDao = productDao;
+        this.productPriceCalculator = productPriceCalculator;
         this.priceListReport = priceListReport;
     }
 
     void generateReport(){
-        var productDao = new ProductDao();
-        var products = productDao.findAll();
+        var products = this.productDao.findAll();
+        var priceLists = this.productPriceCalculator.calculatePrices(products);
 
-        var productPriceCalculator = new ProductPriceCalculator();
-        var priceLists = productPriceCalculator.calculatePrices(products);
-
-        // not using DI
-        // var pdfPriceListReport = new PdfPriceListReport();
-        // pdfPriceListReport.writeReport(priceLists);
-        // var xlsPriceListReport = new XlsPriceListReport();
-        // xlsPriceListReport.writeReport(priceLists);
-
-        // using DI
         this.priceListReport.writeReport(priceLists);
     }
 }
