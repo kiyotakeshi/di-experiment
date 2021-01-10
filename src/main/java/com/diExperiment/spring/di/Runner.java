@@ -16,7 +16,7 @@ public class Runner {
     private static AnnotationConfigApplicationContext getSpringContext(String profile) {
         var context = new AnnotationConfigApplicationContext();
         context.getEnvironment().setActiveProfiles(profile);
-        context.register(Configuration.class);
+        context.register(AppConfig.class);
         context.refresh();
         return context;
     }
